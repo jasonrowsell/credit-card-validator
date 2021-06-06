@@ -29,16 +29,6 @@ Tech test focusing on writing high-quality code, algorithmic understanding, and 
 The test requires to build a program that checks the validation of credit cards, by using Luhn algorithm. The program
 is written in JavaScript and tested with Jest.
 
-<div align="center">
-
----
-
-[Top](#table-of-contents)
-
----
-
-</div>
-
 <!-- Getting Started -->
 
 ## Getting Started
@@ -100,15 +90,9 @@ true
 ['Visa']
 ```
 
-<div align="center">
+[Contents](#table-of-contents)
 
----
-
-[Top](#table-of-contents)
-
----
-
-</div>
+--------
 
 <!-- Spec -->
 
@@ -151,15 +135,9 @@ If the number doesn’t start with any of the numbers listed, print out a messag
 
 - Return an array of companies that have mailed out cards with invalid numbers. This array should NOT contain duplicates, i.e. even if there are two invalid Visa cards, "Visa" should only appear once in the array.
 
-<div align="center">
+[Contents](#table-of-contents)
 
----
-
-[Top](#table-of-contents)
-
----
-
-</div>
+--------
 
 <!-- Design -->
 
@@ -188,15 +166,9 @@ Using Jest I was able to test if the code was working as expected. The test file
 - [Jest](https://jestjs.io/)
   - Used for automated testing.
 
-<div align="center">
+[Contents](#table-of-contents)
 
----
-
-[Top](#table-of-contents)
-
----
-
-</div>
+--------
 
 <!-- Plan -->
 
