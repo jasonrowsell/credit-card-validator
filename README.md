@@ -78,7 +78,7 @@ validator = new Validator
 A demonstration of how to use the program.
 
 ```sh
-> node './src/validator.rb'
+> node
 
 > const Validator = require './src/validator.js'
 
