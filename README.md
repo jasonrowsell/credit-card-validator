@@ -2,6 +2,65 @@
 
 Tech test focusing on writing high-quality code, algorithmic understanding, and test driven development (TDD).
 
+## Getting Started
+
+### Development
+
+Clone this repo.
+To install dependencies:
+
+```shell
+npm install
+```
+
+Run test suites with:
+
+```shell
+npm test
+```
+
+For an interactive prompt that will allow you to experiment:
+
+Run IRB:
+
+```shell
+node
+```
+
+Once in IRB:
+
+```node
+const Validator = require './src/validator.js'
+validator = new Validator
+```
+
+### Usage
+
+A demonstration of how to use the program.
+
+```sh
+> node './src/validator.rb'
+
+> const Validator = require './src/validator.js'
+
+> validator = new Validator
+
+> const card1 = [4, 5, 3, 9, 6, 7, 7, 9, 0, 8, 0, 1, 6, 8, 0, 8]
+
+> const card2 = [4, 5, 3, 2, 7, 7, 8, 7, 7, 1, 0, 9, 1, 7, 9, 5]
+
+> const batch = [card1, card2]
+
+> validator.validateCred(card1)
+true
+
+> validator.findInvalidCards(batch)
+[card2]
+
+> validator.idInvalidCardCompanies(batch)
+['Visa']
+```
+
 ## Spec
 
 ### Context
@@ -40,6 +99,10 @@ consider the card number 4388576018402626):
 If the number doesn’t start with any of the numbers listed, print out a message like: “Company not found”.
 
 - Return an array of companies that have mailed out cards with invalid numbers. This array should NOT contain duplicates, i.e. even if there are two invalid Visa cards, "Visa" should only appear once in the array.
+
+## Test Coverage
+
+![Test Coverage](./images/tests.png)
 
 ## Plan
 

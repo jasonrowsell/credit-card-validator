@@ -26,30 +26,28 @@ class Validator {
     for (let i = 0; i < invalidBatch.length; i++) {
       switch (invalidBatch[i][0]) {
         case 3:
-          if (companies.indexOf('Amex') === -1) {
-            companies.push('Amex');
-          }
+          _includeCompany(companies, 'Amex');
           break;
         case 4:
-          if (companies.indexOf('Visa') === -1) {
-            companies.push('Visa');
-          }
+          this._includeCompany(companies, 'Visa');
           break;
         case 5:
-          if (companies.indexOf('Mastercard') === -1) {
-            companies.push('Mastercard');
-          }
+          this._includeCompany(companies, 'Mastercard');
           break;
         case 6:
-          if (companies.indexOf('Discover') === -1) {
-            companies.push('Discover');
-          }
+          this._includeCompany(companies, 'Discover');
           break;
         default:
           return 'Company not found';
       }
     }
     return companies;
+  }
+
+  _includeCompany(arr, company) {
+    if (arr.indexOf(company) === -1) {
+      arr.push(company);
+    }
   }
 }
 
