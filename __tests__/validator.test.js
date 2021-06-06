@@ -33,11 +33,6 @@ const batch = [
   invalid3,
   invalid4,
   invalid5,
-  mystery1,
-  mystery2,
-  mystery3,
-  mystery4,
-  mystery5,
 ];
 
 describe('Validator', () => {
@@ -58,7 +53,8 @@ describe('Validator', () => {
 
   describe('#findInvalidCards', () => {
     it('returns an array of invalid cards', () => {
-      expect(validator.findInvalidCards(invalid1)).toEqual(invalid1);
+      const invalidArr = [invalid1, invalid2, invalid3, invalid4, invalid5];
+      expect(validator.findInvalidCards(batch)).toEqual(invalidArr);
     });
   });
 });
