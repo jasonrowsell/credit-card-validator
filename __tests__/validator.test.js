@@ -13,6 +13,7 @@ const invalid2 = [5, 7, 9, 5, 5, 9, 3, 3, 9, 2, 1, 3, 4, 6, 4, 3];
 const invalid3 = [3, 7, 5, 7, 9, 6, 0, 8, 4, 4, 5, 9, 9, 1, 4];
 const invalid4 = [6, 0, 1, 1, 1, 2, 7, 9, 6, 1, 7, 7, 7, 9, 3, 5];
 const invalid5 = [5, 3, 8, 2, 0, 1, 9, 7, 7, 2, 8, 8, 3, 8, 5, 4];
+const invalid6 = [2, 3, 8, 2, 0, 1, 9, 7, 7, 2, 8, 8, 3, 8, 5, 4];
 
 // An array of all the arrays above
 const batch = [
@@ -58,6 +59,11 @@ describe('Validator', () => {
     it('return companies that have mailed out cards with invalid numbers', () => {
       const companiesArr = ['Visa', 'Mastercard', 'Amex', 'Discover'];
       expect(validator.idInvalidCardCompanies(batch)).toEqual(companiesArr);
+    });
+    it('return no companies when companies are not included', () => {
+      expect(validator.idInvalidCardCompanies([invalid6])).toEqual(
+        'Company not found'
+      );
     });
   });
 });
