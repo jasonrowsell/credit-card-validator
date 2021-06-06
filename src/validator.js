@@ -26,7 +26,7 @@ class Validator {
     for (let i = 0; i < invalidBatch.length; i++) {
       switch (invalidBatch[i][0]) {
         case 3:
-          _includeCompany(companies, 'Amex');
+          this._includeCompany(companies, 'Amex');
           break;
         case 4:
           this._includeCompany(companies, 'Visa');
