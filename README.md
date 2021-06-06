@@ -1,5 +1,7 @@
 # Credit Card Validator
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/d912c6aebd2b35b423c5/maintainability)](https://codeclimate.com/github/jasonrowsell/credit-card-validator/maintainability) [![Build Status](https://travis-ci.com/jasonrowsell/credit-card-validator.svg?branch=main)](https://travis-ci.com/jasonrowsell/credit-card-validator) [![codecov](https://codecov.io/gh/jasonrowsell/credit-card-validator/branch/main/graph/badge.svg?token=PdHt7O9R86)](https://codecov.io/gh/jasonrowsell/credit-card-validator)
+
 Tech test focusing on writing high-quality code, algorithmic understanding, and test driven development (TDD).
 
 ## Getting Started
