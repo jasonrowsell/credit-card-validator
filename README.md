@@ -2,7 +2,44 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/d912c6aebd2b35b423c5/maintainability)](https://codeclimate.com/github/jasonrowsell/credit-card-validator/maintainability) [![Build Status](https://travis-ci.com/jasonrowsell/credit-card-validator.svg?branch=main)](https://travis-ci.com/jasonrowsell/credit-card-validator) [![codecov](https://codecov.io/gh/jasonrowsell/credit-card-validator/branch/main/graph/badge.svg?token=PdHt7O9R86)](https://codecov.io/gh/jasonrowsell/credit-card-validator)
 
+<!-- Talbe of Contents -->
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Getting Started](#getting-started)
+  - [Development](#development)
+  - [Usage](#usage)
+- [Spec](#spec)
+  - [Context](#context)
+  - [Requirements](#requirements)
+- [Design](#design)
+  - [Testing](#testing)
+  - [Test Coverage](#test-coverage)
+  - [Technologies Used](#technologies-used)
+- [Plan](#plan)
+  - [User Stories](#user-stories)
+  - [Luhn Algorithm](#luhn-algorithm)
+
+<!-- Overview -->
+
+## Overview
+
 Tech test focusing on writing high-quality code, algorithmic understanding, and test driven development (TDD).
+The test requires to build a program that checks the validation of credit cards, by using Luhn algorithm. The program
+is written in JavaScript and tested with Jest.
+
+<div align="center">
+
+---
+
+[Top](#table-of-contents)
+
+---
+
+</div>
+
+<!-- Getting Started -->
 
 ## Getting Started
 
@@ -63,6 +100,18 @@ true
 ['Visa']
 ```
 
+<div align="center">
+
+---
+
+[Top](#table-of-contents)
+
+---
+
+</div>
+
+<!-- Spec -->
+
 ## Spec
 
 ### Context
@@ -102,9 +151,54 @@ If the number doesn’t start with any of the numbers listed, print out a messag
 
 - Return an array of companies that have mailed out cards with invalid numbers. This array should NOT contain duplicates, i.e. even if there are two invalid Visa cards, "Visa" should only appear once in the array.
 
-## Test Coverage
+<div align="center">
+
+---
+
+[Top](#table-of-contents)
+
+---
+
+</div>
+
+<!-- Design -->
+
+## Design
+
+### Testing
+
+Extensive testing and error checking was undertaken throughout the development process.
+
+- [Test Coverage: 100%](#test-coverage), `jest --coverage`
+- Testing covers and passes requirements
+- Prominence on BDD (Behaviour Driven Development)
+- Unit tests in isolation
+- Red Green Refactor loop
+
+### Test Coverage
+
+Using Jest I was able to test if the code was working as expected. The test files can be found [here](__tests__).
 
 ![Test Coverage](./images/tests.png)
+
+### Technologies Used
+
+- [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+  - Used for program functionality.
+- [Jest](https://jestjs.io/)
+  - Used for automated testing.
+
+<div align="center">
+
+---
+
+[Top](#table-of-contents)
+
+---
+
+</div>
+
+<!-- Plan -->
 
 ## Plan
 
@@ -127,3 +221,34 @@ As a clerk,
 To identify the credit card companies that have possibly issued these faulty numbers,
 I would like to view the companies associated to the invalid cards.
 ```
+
+### Luhn Algorithm
+
+Pseudocode:
+
+```
+function checkLuhn(string purportedCC) {
+    int nDigits := length(purportedCC)
+    int sum := integer(purportedCC[nDigits-1])
+    int parity := nDigits modulus 2
+    for i from 0 to nDigits - 2 {
+        int digit := integer(purportedCC[i])
+        if i modulus 2 = parity
+            digit := digit × 2
+        if digit > 9
+            digit := digit - 9
+        sum := sum + digit
+    }
+    return (sum modulus 10) = 0
+}
+```
+
+<div align="center">
+
+---
+
+[Top](#table-of-contents)
+
+---
+
+</div>
