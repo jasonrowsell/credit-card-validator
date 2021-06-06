@@ -1,5 +1,5 @@
-test = () => {
-  return 'Hello';
+validateCred = (cardArr) => {
+  return true;
 };
 
-module.exports = test;
+module.exports = validateCred;
