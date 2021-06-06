@@ -18,7 +18,7 @@ class Validator {
   }
 
   findInvalidCards = (cards) => {
-    return cards.filter((card) => this.validateCred(card) == false);
+    return cards.filter((card) => !this.validateCred(card));
   };
 }
 
