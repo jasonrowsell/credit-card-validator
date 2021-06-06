@@ -17,9 +17,13 @@ class Validator {
     return sum % 10 === 0;
   }
 
-  findInvalidCards = (cards) => {
+  findInvalidCards(cards) {
     return cards.filter((card) => !this.validateCred(card));
-  };
+  }
+
+  idInvalidCardCompanies(cards) {
+    return ['Visa', 'Mastercard', 'Amex', 'Discover'];
+  }
 }
 
 module.exports = Validator;
