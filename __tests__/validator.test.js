@@ -1,4 +1,4 @@
-const validateCred = require('../src/validator');
+const Validator = require('../src/validator');
 
 // All valid credit card numbers
 const valid1 = [4, 5, 3, 9, 6, 7, 7, 9, 0, 8, 0, 1, 6, 8, 0, 8];
@@ -40,11 +40,25 @@ const batch = [
   mystery5,
 ];
 
-describe('#validateCred', () => {
-  it('returns true for a valid card', () => {
-    expect(validateCred(valid1)).toBeTruthy();
+describe('Validator', () => {
+  let validator;
+
+  beforeEach(() => {
+    validator = new Validator();
   });
-  it('returns false for an invalid card', () => {
-    expect(validateCred(invalid1)).toBeFalsy();
+
+  describe('#validateCred', () => {
+    it('returns true for a valid card', () => {
+      expect(validator.validateCred(valid1)).toBeTruthy();
+    });
+    it('returns false for an invalid card', () => {
+      expect(validator.validateCred(invalid1)).toBeFalsy();
+    });
+  });
+
+  describe('#findInvalidCards', () => {
+    it('returns an array of invalid cards', () => {
+      expect(validator.findInvalidCards(invalid1)).toEqual(invalid1);
+    });
   });
 });

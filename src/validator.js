@@ -1,19 +1,25 @@
-validateCred = (cardArr) => {
-  var sum = cardArr[cardArr.length - 1];
-  let nDigits = cardArr.length;
-  let parity = nDigits % 2;
+class Validator {
+  validateCred(cardArr) {
+    var sum = cardArr[cardArr.length - 1];
+    let nDigits = cardArr.length;
+    let parity = nDigits % 2;
 
-  for (i = 0; i < nDigits - 1; i++) {
-    var digit = cardArr[i];
-    if (i % 2 == parity) {
-      digit *= 2;
+    for (let i = 0; i < nDigits - 1; i++) {
+      var digit = cardArr[i];
+      if (i % 2 == parity) {
+        digit *= 2;
+      }
+      if (digit > 9) {
+        digit -= 9;
+      }
+      sum += digit;
     }
-    if (digit > 9) {
-      digit -= 9;
-    }
-    sum += digit;
+    return sum % 10 === 0;
   }
-  return sum % 10 === 0;
-};
 
-module.exports = validateCred;
+  findInvalidCards = (cards) => {
+    return cards;
+  };
+}
+
+module.exports = Validator;
