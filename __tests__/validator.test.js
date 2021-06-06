@@ -44,4 +44,7 @@ describe('#validateCred', () => {
   it('returns true for a valid card', () => {
     expect(validateCred(valid1)).toBeTruthy();
   });
+  it('returns false for an invalid card', () => {
+    expect(validateCred(invalid1)).toBeFalsy();
+  });
 });
