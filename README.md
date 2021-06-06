@@ -40,3 +40,25 @@ consider the card number 4388576018402626):
 If the number doesn’t start with any of the numbers listed, print out a message like: “Company not found”.
 
 - Return an array of companies that have mailed out cards with invalid numbers. This array should NOT contain duplicates, i.e. even if there are two invalid Visa cards, "Visa" should only appear once in the array.
+
+## Plan
+
+### User Stories
+
+```
+As a clerk,
+To prevent the distribution of fraudulent cards,
+I would like to identify the validity of a card.
+```
+
+```
+As a clerk,
+To record the illegitimate cards,
+I would like to view all invalid cards.
+```
+
+```
+As a clerk,
+To identify the credit card companies that have possibly issued these faulty numbers,
+I would like to view the companies associated to the invalid cards.
+```
