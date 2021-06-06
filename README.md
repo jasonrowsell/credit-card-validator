@@ -60,13 +60,13 @@ npm test
 
 For an interactive prompt that will allow you to experiment:
 
-Run IRB:
+Run Node:
 
 ```shell
 node
 ```
 
-Once in IRB:
+Once in Node:
 
 ```node
 const Validator = require './src/validator.js'
