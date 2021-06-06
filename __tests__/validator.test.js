@@ -52,6 +52,9 @@ describe('Validator', () => {
   });
 
   describe('#findInvalidCards', () => {
+    it('returns an empty array if no invalid cards', () => {
+      expect(validator.findInvalidCards([valid1])).toEqual([]);
+    });
     it('returns an array of invalid cards', () => {
       const invalidArr = [invalid1, invalid2, invalid3, invalid4, invalid5];
       expect(validator.findInvalidCards(batch)).toEqual(invalidArr);
